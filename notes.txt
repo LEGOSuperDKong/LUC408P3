@@ -1,0 +1,58 @@
+MAPS (Genres):
+
+[Main]:
+Blues - Swamplands
+Classical - Woodlands
+Reggae - Tropical
+Jazz - Uptown
+
+[Secondary]:
+Country - Farmlands
+Electronic - ???
+Hip-hop - Downtown
+Rock/Metal - Mountains/Volcano
+
+[Events]:
+Christmas - Winterglade
+Halloween - Churchyard
+
+
+EQUIPMENT (Accessories):
+
+[Weapons]:
+Acoustic Guitar
+Clarinet
+Drums
+Electric Guitar
+Piano
+Saxophone
+Trumpet
+Violin
+
+[Accessories]:
+Bow
+Reed
+Drumstick
+Mouthpiece
+Mute
+Pedal
+Pick
+Tuner
+
+
+ITEMS (Songs):
+
+[Buffs]:
+Soothing Melody (Heal)
+Song of Haste (+SPD)
+Song of Defense (+DEF)
+Song of Revival (Revive)
+Power March (+ATK)
+Song of Regeneration (Regen)
+
+[Debuffs]:
+Song of Damage (Damage)
+Sleepy Lullaby (-SPD)
+Haunting Refrain (-ATK)
+Discordant Notes (-DEF)
+Song of Poison (Poison)
