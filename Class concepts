@@ -1,5 +1,7 @@
 List classes below in the following format:
 
+(get and set methods are implied for attributes unless otherwise specified)
+
 ClassName:
 Method1()
 Method2()
@@ -7,3 +9,76 @@ Method3()
 dataType Attribute1
 dataType Attribute2
 dataType Attribute3
+
+Tile
+Boolean chest
+int Defense
+int moveCost
+Boolean highlight
+int LocationID
+int adjacentUp
+int adjacentDown
+int adjacentLeft
+int adjacentRight
+
+PlayerPiece
+PlayerPiece(PlayerPieceID, PlayerID, ColorID)
+move()
+attack()
+equip()
+dequip()
+int PlayerPieceID
+int Range
+int Defense
+int Attack
+int Speed
+int Luck
+int Health
+Weapon PieceWeapon
+Tile PieceLocation
+
+Player
+createPlayerPiece()
+deletePlayerPiece()
+useItem()
+storeItem()
+int PlayerID
+int ColorID
+int Level
+Item Inventory[] = new Item()
+int NumberofPieces
+
+Item
+int Defense
+int Attack
+int Speed
+int Luck
+int Health
+Boolean FightEligible
+Boolean FieldEligible
+
+Weapon
+int Defense
+int Attack
+int Speed
+int Luck
+int Health
+WeaponID
+
+Enemy
+move()
+attack()
+int Range
+int Defense
+int Attack
+int Speed
+int Luck
+int Health
+int EnemyType
+Tile PieceLocation
+
+
+
+
+
+
