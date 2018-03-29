@@ -1,0 +1,60 @@
+board game
+characters
+get levels by fighting enemies
+collecting items
+options to get quests
+grid-based dungeon type board
+each team gets several of the type
+lowest level starts each round
+terrain differences in dungeons
+Collect chests with items - equip them? Powerups? Some might have levels or quests
+bosses as quests
+pvp at the end
+encounter people on the map, have interactions - battle, trade
+enemies visible on map
+random spawn, either periodically or to keep a minimum
+battles - enemies and allies die permanently,
+items could allow for multiple in fight
+
+
+
+in pvp final battle 
+
+
+what stats do allies/enemies have?
+
+spd determines who goes first - if tie, then random
+luck determines crit/miss 
+def is def
+atk is atk
+movement determines how many spaces they can move
+
+
+defeat opponent's allies, gain an item from their inventory for each of their allies's defeats
+items - use anytime? or only at certain points
+also should be able to trade items
+chests spawn randomly at certain points
+
+enemy spawn at spawn points?
+
+Different music themes for each map that determines how it looks as well
+
+Tiles:
+defense+
+defense-
+neutral
+
+
+
+
+
+
+phaser
+stencil
+unity
+Java/Javascript
+Unreal
+
+What does a turn look like
+
+
