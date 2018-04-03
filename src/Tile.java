@@ -1,4 +1,4 @@
-
+package rpgio;
 
 public class Tile {
 
