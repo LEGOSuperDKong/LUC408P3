@@ -1,12 +1,12 @@
 package rpgio;
 
 public class Item {
-int Defense,
+private int Defense,
 Attack,
 Speed,
 Luck,
 Health;
-Boolean FightEligible,
+private Boolean FightEligible,
 FieldEligible;
   
 }
