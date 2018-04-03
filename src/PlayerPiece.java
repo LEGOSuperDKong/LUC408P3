@@ -1,7 +1,7 @@
 package rpgio;
 
-import class Weapon;
-import class Tile;
+import Weapon.java;
+import Tile.java;
 
 public class PlayerPiece {
     
