@@ -2,12 +2,12 @@ package rpgio;
 
 import Item.java;
 
-public class PlayerPiece {
+public class Player {
     
     private int PlayerID,
     ColorID,
     level,
     NumberofPieces;
-    Item Inventory[] = new Item();
+    private Item Inventory[] = new Item();
     
 }
