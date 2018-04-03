@@ -4,14 +4,14 @@ public class Tile {
 
     //Create variables
     private boolean chest,
-            int defense,
-            int moveCost,
-            boolean highlight,
-            int locationID,
-            int adjacentUp,
-            int adjacentDown,
-            int adjacentLeft,
-            int adjacentRight;
+            highlight;
+    private int defense,
+            moveCost,
+            locationID,
+            adjacentUp,
+            adjacentDown,
+            adjacentLeft,
+            adjacentRight;
 
     //constructor
     public Tile(){
