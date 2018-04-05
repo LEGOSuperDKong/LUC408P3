@@ -1,6 +1,6 @@
 package rpgio;
 
-import Tile.java
+import Tile.java;
   
 public class Enemy {
 private int Range,
