@@ -9,5 +9,16 @@ public class Player {
     level,
     NumberofPieces;
     private Item Inventory[] = new Item();
+    private boolean isAI = false;
+
+    private void setAI()
+    {
+        isAI = true;
+    }
+
+    private boolean getAI()
+    {
+        return isAI;
+    }
     
 }
