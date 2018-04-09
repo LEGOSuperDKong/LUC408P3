@@ -43,16 +43,17 @@ Tuner
 ITEMS (Songs):
 
 [Buffs]:
-Soothing Melody (Heal)
-Song of Haste (+SPD)
-Song of Defense (+DEF)
-Song of Revival (Revive)
-Power March (+ATK)
-Song of Regeneration (Regen)
+Whole Rest (Heal)
+Soothing Melody (Regen)
+Heavenly Chorus (Revive)
+Powerful March (+ATK)
+Bolstering Reprise (+DEF)
+Energetic Ditty (+SPD)
 
 [Debuffs]:
-Song of Damage (Damage)
-Sleepy Lullaby (-SPD)
+Heavy Beat (Damage)
+Droning Chant (Poison)
 Haunting Refrain (-ATK)
-Discordant Notes (-DEF)
-Song of Poison (Poison)
+Dissonant Lyric  (-DEF)
+Sleepy Lullaby (-SPD)
+
