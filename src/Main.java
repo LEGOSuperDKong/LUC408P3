@@ -4,6 +4,7 @@ package rpgio;
 import Player.java;
 import Weapon.java;
 import Enemy.java;
+import gui.java;
 import java.util.Random;
 import java.awt.*;
 import java.awt.event.*;
@@ -29,6 +30,9 @@ public class Main{
         playerArr[2].setAI();
 
         //TODO: Initialize map
+        gui frame = new gui();
+        frame.setVisible(true);
+
         JButton jbtnMove = new JButton ("Move");
         JButton jbtnItem = new JButton ("Use Item");
 
