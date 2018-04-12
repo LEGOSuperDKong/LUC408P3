@@ -49,7 +49,7 @@ public class Tile {
         return adjacentDown;
     }
 
-    public int getAdjacentLeft()){
+    public int getAdjacentLeft(){
         return adjacentLeft;
     }
 

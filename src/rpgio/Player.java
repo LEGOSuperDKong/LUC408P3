@@ -1,24 +1,24 @@
 package rpgio;
 
-import Item.java;
+import rpgio.Item;
 
 public class Player {
-    
+
     private int PlayerID,
     ColorID,
     level,
     NumberofPieces;
-    private Item Inventory[] = new Item();
+    private Item [] Inventory = new Item [5];
     private boolean isAI = false;
 
-    private void setAI()
+    public void setAI()
     {
         isAI = true;
     }
 
-    private boolean getAI()
+    public boolean getAI()
     {
         return isAI;
     }
-    
+
 }

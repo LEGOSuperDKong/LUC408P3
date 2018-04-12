@@ -8,5 +8,5 @@ Luck,
 Health;
 private Boolean FightEligible,
 FieldEligible;
-  
+
 }

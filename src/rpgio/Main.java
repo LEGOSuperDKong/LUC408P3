@@ -1,10 +1,9 @@
 package rpgio;
 
-
-import Player.java;
-import Weapon.java;
-import Enemy.java;
-import gui.java;
+import rpgio.Player;
+import rpgio.Weapon;
+import rpgio.Enemy;
+import rpgio.gui;
 import java.util.Random;
 import java.awt.*;
 import java.awt.event.*;
@@ -14,12 +13,16 @@ import javax.swing.*;
 public class Main{
 
     //Main function
-    public static void main (String [ ] args) {
+    public static void main (String[] args) {
 
 
         boolean winner = false;
 
         Player [] playerArr = new Player [4];
+        for(int i=0; i < playerArr.length; i++)
+        {
+        	playerArr[i]= new Player();
+        }
 
         Random rand = new Random();
 
@@ -29,23 +32,21 @@ public class Main{
         playerArr[1].setAI();
         playerArr[2].setAI();
 
-        //TODO: Initialize map
+        //Initialize map
         gui frame = new gui();
         frame.setVisible(true);
 
-        JButton jbtnMove = new JButton ("Move");
-        JButton jbtnItem = new JButton ("Use Item");
 
-        while(!winner)){
+        while(!winner){
             turn(playerArr[playerTurn]);
 
             //set next players turn
-            int playerTurn = (playerTurn + 1) % 4;
+            playerTurn = (playerTurn + 1) % 4;
         }
 
     }
 
-    private void turn (Player p)
+    private static void turn (Player p)
     {
        if(p.getAI())
        {

@@ -1,6 +1,6 @@
 package rpgio;
 
-import Item.java;
+import rpgio.Item;
 
 public class Weapon extends Item {
 private int WeaponID;
