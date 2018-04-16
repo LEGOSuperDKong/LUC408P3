@@ -43,18 +43,18 @@ Tuner
 ITEMS (Songs):
 
 [Buffs]:
-*Whole Rest (Heal)
-Soothing Melody (Regen)
+*Sleepy Lullaby (Heal)
+Romantic Aria (Regen)
 Heavenly Chorus (Revive)
 Powerful March (+ATK)
 *Bolstering Reprise (+DEF)
-Energetic Ditty (+SPD)
+Energetic Tune (+SPD)
 
 [Debuffs]:
 *Heavy Beat (Damage)
-*Droning Chant (Poison)
+Infectious Rhythm (Poison)
 Haunting Refrain (-ATK)
 Dissonant Lyric  (-DEF)
-Sleepy Lullaby (-SPD)
+Wintry Carol (-SPD)
 
-*Names subject to change
+**Names/designs subject to change or swap around
