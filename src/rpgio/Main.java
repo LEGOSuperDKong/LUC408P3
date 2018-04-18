@@ -8,6 +8,7 @@ import java.util.Random;
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
+import java.io.File;
 
 
 public class Main{
@@ -15,6 +16,7 @@ public class Main{
     //Main function
     public static void main (String[] args) {
 
+        System.out.println(new File("").getAbsolutePath());
 
         boolean winner = false;
 
