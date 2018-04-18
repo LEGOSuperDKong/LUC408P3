@@ -7,13 +7,26 @@ import javax.swing.*;
 
 public class gui extends JFrame{
 
+	//buttons and images
+	ImageIcon movebg = new ImageIcon("images/moveButton.png");
+    ImageIcon itembg = new ImageIcon("images/itemButton.png");
+    ImageIcon turnbg = new ImageIcon("images/turnButton.png");
 
+    JButton btnTurn = new JButton(turnbg);
+    JButton btnMove = new JButton(movebg);
+    JButton btnItem = new JButton(itembg);
+
+    //listener
+    ActionListener listener = new Listener(btnTurn, btnMove);
+
+    //Constructor
     gui()
     {
     	super("RPGio"); //Sets title
         setSize(1920,1200);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         
+
         setLayout(new GridBagLayout());
         GridBagConstraints c = new GridBagConstraints();
 
@@ -23,14 +36,7 @@ public class gui extends JFrame{
 
         JPanel buttonPanel = new JPanel();
         buttonPanel.setLayout(new GridBagLayout());
-        
-        ImageIcon movebg = new ImageIcon("moveButton.png");
-        ImageIcon itembg = new ImageIcon("itemButton.png");
-        ImageIcon turnbg = new ImageIcon("turnButton.png");
-        
-        JButton btnTurn = new JButton(turnbg);
-        JButton btnMove = new JButton(movebg);
-        JButton btnItem = new JButton(itembg);
+
 
         btnMove.setBounds(0, 0, 100, 100);
         btnItem.setBounds(100, 0, 100, 100);
@@ -40,6 +46,7 @@ public class gui extends JFrame{
         c.gridx = 0;
         c.gridy = 0;
         buttonPanel.add(btnMove,c);
+        btnMove.addActionListener(listener);
         
         //item button
         c.fill = GridBagConstraints.HORIZONTAL;
@@ -52,6 +59,7 @@ public class gui extends JFrame{
         c.gridx = 2;
         c.gridy = 0;
         buttonPanel.add(btnTurn, c);
+        btnTurn.addActionListener(listener);
         
         //panel of buttons added to frame
         c.fill = GridBagConstraints.HORIZONTAL;
@@ -66,6 +74,14 @@ public class gui extends JFrame{
         c.gridx = 0;
         c.gridy = 1;
         add(gameBoardHolder,c);
+
     }
+
+
+  //Get methods for buttons for use with Listener class
+    public ActionListener getListener(){
+    	return listener;
+    }
+
 
 }
