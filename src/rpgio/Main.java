@@ -36,7 +36,7 @@ public class Main{
         playerArr[2].setAI();
 
         //Initialize map
-        frame = new gui();
+        frame = new gui(playerArr);
         frame.setVisible(true);
 
 

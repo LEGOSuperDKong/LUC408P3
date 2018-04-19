@@ -3,6 +3,7 @@ package rpgio;
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
+import rpgio.Player;
 
 
 public class gui extends JFrame{
@@ -27,7 +28,7 @@ public class gui extends JFrame{
 
 
     //Constructor
-    gui()
+    gui(Player [] pArr)
     {
     	super("RPGio"); //Sets title
         setSize(1920,1200);
