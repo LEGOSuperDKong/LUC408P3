@@ -25,6 +25,9 @@ public class gui extends JFrame{
     //listener
     ActionListener listener = new Listener(this, btnTurn, btnMove);
 
+    //Store players
+    Player players [] = new Player [4];
+
 
 
     //Constructor
@@ -96,13 +99,19 @@ public class gui extends JFrame{
         c.gridy = 0;
         add(buttonPanel, c);
         
-        ImageIcon gameMap = new ImageIcon("gameboardcopy.png");
+        ImageIcon gameMap = new ImageIcon("images/gameboardcopy.png");
         gameBoard.setIcon(gameMap);
         gameBoardHolder.add(gameBoard);
         c.fill = GridBagConstraints.HORIZONTAL;
         c.gridx = 0;
         c.gridy = 1;
         add(gameBoardHolder,c);
+
+        //Save players
+        for (int i = 0; i < pArr.length; i++)
+        {
+        	players[i] = pArr[i];
+        }
 
     }
 
