@@ -16,6 +16,8 @@ public class gui extends JFrame{
     JButton btnMove = new JButton(movebg);
     JButton btnItem = new JButton(itembg);
 
+    JTextField turnText = new JTextField("Test Text");
+
     boolean endTurn = false;
     boolean move = false;
 
@@ -66,6 +68,13 @@ public class gui extends JFrame{
         buttonPanel.add(btnTurn, c);
         btnTurn.addActionListener(listener);
         
+        //turn text
+        turnText.setEditable(false);
+        c.fill = GridBagConstraints.HORIZONTAL;
+        c.gridx = 3;
+        c.gridy = 0;
+        buttonPanel.add(turnText, c);
+
         //panel of buttons added to frame
         c.fill = GridBagConstraints.HORIZONTAL;
         c.gridx = 0;
@@ -83,7 +92,7 @@ public class gui extends JFrame{
     }
 
 
-  //Set methods for buttons for use with Listener class
+  //Set methods
     public void setEndTurn(boolean t){
     	endTurn = t;
     }
@@ -92,7 +101,11 @@ public class gui extends JFrame{
     	move = t;
     }
 
-    //Get methods for buttons
+    public void setTurnText(String s){
+    	turnText.setText(s);
+    }
+
+    //Get methods
     public boolean getEndTurn()
     {
     	return endTurn;

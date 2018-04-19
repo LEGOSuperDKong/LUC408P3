@@ -14,6 +14,7 @@ import java.io.File;
 public class Main{
 
 	static gui frame;
+    static Random rand = new Random();
 
     //Main function
     public static void main (String[] args) {
@@ -25,10 +26,8 @@ public class Main{
         Player [] playerArr = new Player [4];
         for(int i=0; i < playerArr.length; i++)
         {
-        	playerArr[i]= new Player();
+        	playerArr[i]= new Player(i+1);
         }
-
-        Random rand = new Random();
 
         int playerTurn = rand.nextInt(4);
 
@@ -54,20 +53,39 @@ public class Main{
     {
        if(p.getAI())
        {
-           //TODO: send to another function
 
-    	   //For times sake, just make them move
-    	   move(p);
+    	   //Set text to Computer
+    	   frame.setTurnText("Computer " + p.getID() +"'s Turn");
 
-    	   //add pause between moves for realism
+    	   //add pause before move for realism
     	   try{
-    		   Thread.sleep(2000);
+    		   Thread.sleep(1000);
     	   }catch(Exception e){
     		   e.printStackTrace();
     	   }
 
+    	   //allows them to move up to 4 times
+    	   int numOfMoves = rand.nextInt(4) + 1;
+
+           for(int i = numOfMoves; i > 0; i--)
+           {
+        	   //For time's sake, just make them move
+        	   move(p);
+
+        	   //add pause after move for realism
+        	   try{
+        		   Thread.sleep(1000);
+        	   }catch(Exception e){
+        		   e.printStackTrace();
+        	   }
+           }
+
+
            return;
        }
+
+       //IF IT GETS HERE PLAYER IS NOT AI
+       frame.setTurnText("Your Turn!");
 
 
         while (!frame.getEndTurn())
@@ -92,8 +110,16 @@ public class Main{
 
     private static void move(Player p)
     {
-    	//move player
-    	System.out.println("moved player");
+    	/*
+    	 * TODO: Implement this. Could just move player left and right
+    	 * and reverse direction when they hit the wall? Or could randomly
+    	 * generate a direction of move, just have to handle collisions then or
+    	 * just allow one player to be on top of another. Whatever we have time for...
+    	 *
+    	 * */
+
+
+    	System.out.println("moved player " + p.getID());
     }
 
 
