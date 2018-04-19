@@ -31,7 +31,10 @@ public class gui extends JFrame{
     gui(Player [] pArr)
     {
     	super("RPGio"); //Sets title
-        setSize(1920,1200);
+
+    	Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+        setSize(screenSize);
+        setResizable(false);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         
 
@@ -45,14 +48,15 @@ public class gui extends JFrame{
         JPanel buttonPanel = new JPanel();
         buttonPanel.setLayout(new GridBagLayout());
 
-
-        btnMove.setBounds(0, 0, 100, 100);
-        btnItem.setBounds(100, 0, 100, 100);
+        //set insets for all items
+        c.insets = new Insets(15,15,0,0);
         
         //move button
         c.fill = GridBagConstraints.HORIZONTAL;
         c.gridx = 0;
         c.gridy = 0;
+        btnMove.setContentAreaFilled(false);
+        btnMove.setBorder(javax.swing.BorderFactory.createEmptyBorder());
         buttonPanel.add(btnMove,c);
         btnMove.addActionListener(listener);
         
@@ -60,12 +64,16 @@ public class gui extends JFrame{
         c.fill = GridBagConstraints.HORIZONTAL;
         c.gridx = 1;
         c.gridy = 0;
+        btnItem.setContentAreaFilled(false);
+        btnItem.setBorder(javax.swing.BorderFactory.createEmptyBorder());
         buttonPanel.add(btnItem,c);
         
         //turn button
         c.fill = GridBagConstraints.HORIZONTAL;
         c.gridx = 2;
         c.gridy = 0;
+        btnTurn.setContentAreaFilled(false);
+        btnTurn.setBorder(javax.swing.BorderFactory.createEmptyBorder());
         buttonPanel.add(btnTurn, c);
         btnTurn.addActionListener(listener);
         
@@ -74,6 +82,12 @@ public class gui extends JFrame{
         c.fill = GridBagConstraints.HORIZONTAL;
         c.gridx = 3;
         c.gridy = 0;
+        Font f = new Font("Veranda", Font.ITALIC, 40);
+        turnText.setFont(f);
+        Color darkredColor = new Color(209,61,31);
+        turnText.setForeground(darkredColor);
+        turnText.setHorizontalAlignment(JTextField.CENTER);
+        turnText.setBorder(javax.swing.BorderFactory.createEmptyBorder());
         buttonPanel.add(turnText, c);
 
         //panel of buttons added to frame
