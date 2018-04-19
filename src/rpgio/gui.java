@@ -113,6 +113,8 @@ public class gui extends JFrame{
         	players[i] = pArr[i];
         }
 
+
+
     }
 
 
@@ -144,6 +146,14 @@ public class gui extends JFrame{
     public boolean getMove()
     {
     	return move;
+    }
+
+    //move player
+
+    public void movePlayer()
+    {
+    	//move the icon
+    	System.out.println("Moving Player");
     }
 
 }

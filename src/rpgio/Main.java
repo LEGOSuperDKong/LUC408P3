@@ -123,7 +123,7 @@ public class Main{
     	 * just allow one player to be on top of another. Whatever we have time for...
     	 *
     	 * */
-
+    	frame.movePlayer();
 
     	System.out.println("moved player " + p.getID());
     }
