@@ -17,7 +17,7 @@ public class gui extends JFrame{
     JButton btnMove = new JButton(movebg);
     JButton btnItem = new JButton(itembg);
 
-    JTextField turnText = new JTextField("Test Text");
+    JTextField turnText = new JTextField("", 11);
 
     boolean endTurn = false;
     boolean move = false;
