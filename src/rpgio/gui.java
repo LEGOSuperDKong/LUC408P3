@@ -16,8 +16,13 @@ public class gui extends JFrame{
     JButton btnMove = new JButton(movebg);
     JButton btnItem = new JButton(itembg);
 
+    boolean endTurn = false;
+    boolean move = false;
+
     //listener
-    ActionListener listener = new Listener(btnTurn, btnMove);
+    ActionListener listener = new Listener(this, btnTurn, btnMove);
+
+
 
     //Constructor
     gui()
@@ -78,10 +83,24 @@ public class gui extends JFrame{
     }
 
 
-  //Get methods for buttons for use with Listener class
-    public ActionListener getListener(){
-    	return listener;
+  //Set methods for buttons for use with Listener class
+    public void setEndTurn(boolean t){
+    	endTurn = t;
     }
 
+    public void setMove(boolean t){
+    	move = t;
+    }
+
+    //Get methods for buttons
+    public boolean getEndTurn()
+    {
+    	return endTurn;
+    }
+
+    public boolean getMove()
+    {
+    	return move;
+    }
 
 }

@@ -13,6 +13,8 @@ import java.io.File;
 
 public class Main{
 
+	static gui frame;
+
     //Main function
     public static void main (String[] args) {
 
@@ -35,7 +37,7 @@ public class Main{
         playerArr[2].setAI();
 
         //Initialize map
-        gui frame = new gui();
+        frame = new gui();
         frame.setVisible(true);
 
 
@@ -52,19 +54,46 @@ public class Main{
     {
        if(p.getAI())
        {
-           //send to another function
+           //TODO: send to another function
+
+    	   //For times sake, just make them move
+    	   move(p);
+
+    	   //add pause between moves for realism
+    	   try{
+    		   Thread.sleep(2000);
+    	   }catch(Exception e){
+    		   e.printStackTrace();
+    	   }
+
            return;
        }
 
-        boolean endTurn = false;
 
-        while (!endTurn){
+        while (!frame.getEndTurn())
+        {
+        	Thread.yield(); //idles thread for Listener to do work.
+
              //move, use items, fight (if next to someone after move)
+        	if(frame.getMove())
+        	{
+        		move(p);
+        		frame.setMove(false);
+        	}
+
         }
 
+        frame.setEndTurn(false);
+        System.out.println("Turn has ended.");
 
         //if they win
         //winner = true;
+    }
+
+    private static void move(Player p)
+    {
+    	//move player
+    	System.out.println("moved player");
     }
 
 
