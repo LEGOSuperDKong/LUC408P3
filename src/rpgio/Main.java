@@ -57,6 +57,9 @@ public class Main{
     	   //Set text to Computer
     	   frame.setTurnText("Computer " + p.getID() +"'s Turn");
 
+    	   //Disable Buttons
+    	   frame.setButtonsEnabled(false);
+
     	   //add pause before move for realism
     	   try{
     		   Thread.sleep(1000);
@@ -86,6 +89,9 @@ public class Main{
 
        //IF IT GETS HERE PLAYER IS NOT AI
        frame.setTurnText("Your Turn!");
+
+       //Enable buttons
+       frame.setButtonsEnabled(true);
 
 
         while (!frame.getEndTurn())

@@ -106,6 +106,12 @@ public class gui extends JFrame{
     	turnText.setText(s);
     }
 
+    public void setButtonsEnabled(boolean t){
+    	btnMove.setEnabled(t);
+    	btnTurn.setEnabled(t);
+    	btnItem.setEnabled(t);
+    }
+
     //Get methods
     public boolean getEndTurn()
     {
